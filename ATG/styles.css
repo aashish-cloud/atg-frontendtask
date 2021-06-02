@@ -1,0 +1,125 @@
+/* General CSS */
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.filter-btn {
+    display: none;
+}
+
+.terms-n-cond {
+    font-size: 12px;
+}
+
+/* Styling the search bar in navbar */
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 20px auto;
+    grid-gap: 5px;
+    background: white;
+    overflow: hidden;
+    border: 1px solid gray;
+    padding: 5px 15px;
+}
+
+/* Styling the page banner */
+
+.header {
+    background: url('images/background1.jpg');
+    height: 440px;
+    color: white;
+}
+
+.header-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: repeat(2, auto);
+}
+
+.header-bottom {
+    align-self: end;
+}
+
+.header-top {
+    display: flex;
+    visibility: hidden;
+}
+
+.header-top .btn {
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+/* Styling location form on the left of the page */
+
+.location {
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    align-items: center;
+    grid-gap: 5px;
+    border-bottom: 1px solid black;
+}
+
+.location ~ p {
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 10px auto;
+    grid-gap: 15px;
+}
+
+.search-bar input,
+.location input {
+    outline: none;
+    border: none;
+}
+
+/* Adding create acc button in mobile size screen */
+
+.compose {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	height: 55px;
+	width: 55px;
+	background: linear-gradient(180deg, #FF5C5C 0%, #F0568A 100%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18), 0px 0px 2px rgba(0, 0, 0, 0.08);
+	color: #FFF;
+	border-radius: 50%;
+	border: none;
+    display: none;
+}
+
+/* Media queries for certain elements */
+
+@media (max-width: 992px) {
+    nav {
+        display: none !important;
+    }
+
+    .header {
+        height: 340px;
+    }
+
+    .header-top {
+        visibility: visible;
+    }
+
+    .post-btn,
+    .group-btn {
+        display: none;
+    }
+
+    .filter-btn {
+        display: block;
+    }
+
+    .tab-hidden {
+        display: none;
+    }
+
+    .compose {
+        display: block;
+    }
+}
